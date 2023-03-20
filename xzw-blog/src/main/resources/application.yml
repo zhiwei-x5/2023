@@ -1,0 +1,34 @@
+server:
+  port: 7777
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sg_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://localhost:3306/lwj?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://8.134.106.178:3306/192.18.146.212?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#    username: 192.18.146.212
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 5MB
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #逻辑删除是基于SpringBoot自带的一种删除方法，该方法可以进行软删除，而不是真正的删除。
+      logic-delete-field: delFlag #所有数据逻辑删除的字段名为delFlage
+      logic-delete-value: 1 #逻辑已删除之（默认为1）
+      logic-not-delete-value: 0 #逻辑未删除之（默认为0）
+      id-type: auto #主键自增
+oss:
+#  accessKey: bGYtkwB9QGwZcGnDlEmI3Wifd0JGBX4-ujD95I_D
+#  secretKey: WgVsjAviOmYD9YJdgcGZdB8566MIrSCcT0irGute
+  #  bucket: xzw-my-blog
+  accessKey: T_l8ppDte5OLi9FnlOo_XgeNPfOvKuwQMNVjmHk4
+  secretKey: 05fs8-CpYOxH6Wic4yHlh_plH7I3vVEJ8XtDB8oF
+
+  bucket: my-blog2023

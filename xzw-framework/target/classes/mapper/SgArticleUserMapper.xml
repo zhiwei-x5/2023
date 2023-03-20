@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xzw.mapper.SgArticleUserMapper">
+
+    <insert id="add">
+        insert into sg_article_user values(#{userId},#{bookmarkId})
+    </insert>
+
+    <delete id="del" >
+        delete from sg_article_user where user_id = #{userId} and article_id = #{bookmarkId}
+    </delete>
+
+</mapper>

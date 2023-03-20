@@ -1,0 +1,9 @@
+com\xzw\controller\MenuController.class
+com\xzw\controller\LoginController.class
+com\xzw\XZWBlogAdminApplication.class
+com\xzw\config\SecurityConfig.class
+com\xzw\controller\RoleController.class
+com\xzw\controller\ArticleController.class
+com\xzw\controller\UserController.class
+com\xzw\controller\BookController.class
+com\xzw\filter\JwtAuthenticationTokenFilter.class
